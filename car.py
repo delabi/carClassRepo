@@ -1,26 +1,29 @@
 class Car:
 	carCount = 0
-	def __init__(self, name="General", model="GM", shapeType="Saloon"):
+	def __init__(self, name="General", model="GM", shapeType="saloon"):
 		self.shapeType = shapeType
 		self.name = name
 		self.model = model
 		self.num_of_doors = 4
+		self.num_of_wheels = 4
+
 		if self.name == "Porshe" :
 			self.num_of_doors = 2
 		if self.name == "Koenigsegg" :
 			self.num_of_doors = 2
-
-		num_of_wheels = 4
+		
 		if self.shapeType == "trailer":
-			num_of_wheels = 8
+			self.num_of_wheels = 8
 
 		self.speed = 0
 		# self.drive = 0
 		Car.carCount += 1
 
-	def Car(name="General", model="GM", shapeType="Saloon"):
-		car = Car(name, model, shapeType)
-		return car
+	
+	def is_saloon(self):
+		if self.shapeType != "trailer":
+			return True
+
 
 	def drive(self, g):
 		self.speed = 11

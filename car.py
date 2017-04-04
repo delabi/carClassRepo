@@ -29,8 +29,9 @@ class Car(object):
 
 
 	def drive(self, g):
-		self.speed = 11
-		return g*self.speed
+		speed = 11
+		vel = g*speed
+		return vel
 
 	def displayCar(self):
 		print "Car is: A",self.shapeType, "called ",self.name, self.model

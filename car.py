@@ -1,4 +1,4 @@
-class Car:
+class Car(object):
 	carCount = 0
 	def __init__(self, name="General", model="GM", shapeType="saloon"):
 		self.shapeType = shapeType
@@ -19,7 +19,10 @@ class Car:
 		# self.drive = 0
 		Car.carCount += 1
 
-	
+	def Car(name="General", model="GM", shapeType="saloon"):
+		car = Car(name="General", model="GM", shapeType="saloon")
+		return car
+
 	def is_saloon(self):
 		if self.shapeType != "trailer":
 			return True
